@@ -11,6 +11,6 @@ RUN npm ci
 
 COPY . .
 
-EXPOSE 8080
+EXPOSE 3000
 
 CMD ["bin/start.sh"]
