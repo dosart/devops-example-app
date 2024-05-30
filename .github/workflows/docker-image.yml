@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
+        name: Run tests
+        run: make test
+      -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       -
