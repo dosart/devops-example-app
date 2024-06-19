@@ -6,6 +6,13 @@ on:
   push:
     branches:
       - 'main'
+  workflow_dispatch:  # Добавляем возможность запуска вручную
+    # Опционально можно задать параметры для вручного запуска
+    inputs:
+      tag:
+        description: 'Docker tag to use'
+        required: true
+        default: 'latest'
 
 env: # тег, под которым будет храниться временный образ-кеш
   TEST_TAG: hexletcomponents/devops-example-app:test
